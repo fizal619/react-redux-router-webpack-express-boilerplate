@@ -1,7 +1,5 @@
 #React-Router + Express Boilerplate
 
-----
-
 Built with **browserHistory** in mind, it has a node server running on port 3000 with a wildcard (*) route to direct any incoming request to index.html. 
 
 If you want to define your own `/api` for use in your app, make sure to `use` the controller above the wildcard to adhere to the rule of priority in routing.
