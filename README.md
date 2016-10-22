@@ -10,6 +10,27 @@ If you want to define your own `/api` for use in your app, make sure to `use` th
 2. `npm install` 
 3. `npm run dev` for the development server
 
+##Directory Structure
+
+```
+
+├── package.json
+├── public
+│   ├── bundle.js
+│   ├── bundle.js.map
+│   └── index.html
+├── README.md
+├── server.js
+├── src
+│   └── index.js
+└── webpack.config.js
+
+```
+
+* Compiled js is piped to the `public/` folder next to our defined index.html(not auto generated yet). 
+* `src/` holds the react components, make sure everything is relevant to index.js. 
+
+
 ##TODO
 
 * Gotta make this deployment ready with a few scripts; most likely specifically for Heroku. 
