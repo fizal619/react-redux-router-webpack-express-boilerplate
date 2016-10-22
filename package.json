@@ -4,11 +4,15 @@
   "description": "Boilerplate for creating a sample react-router application",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --content-base ."
+    "start": "node server.js",
+    "dev": "concurrently --prefix \"[{name}]\" -k \"webpack -d --watch --colors\" \"nodemon server.js\" -n \"WEBPACK,NODEMON\""
   },
-  "author": "Jason Schapiro",
+  "author": "Fizal Sarif",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^3.1.0",
+    "express": "^4.14.0",
+    "path": "^0.12.7",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0"
