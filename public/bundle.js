@@ -57,6 +57,10 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 159);
 	
+	var _Screen = __webpack_require__(/*! ./Screen3.js */ 222);
+	
+	var _Screen2 = _interopRequireDefault(_Screen);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Screen1 = function Screen1() {
@@ -100,6 +104,12 @@
 				'screen2'
 			),
 			_react2.default.createElement('br', null),
+			_react2.default.createElement(
+				_reactRouter.Link,
+				{ to: '/screen3' },
+				'screen3'
+			),
+			_react2.default.createElement('br', null),
 			props.children
 		);
 	};
@@ -111,7 +121,8 @@
 			_reactRouter.Route,
 			{ path: '/', component: Home },
 			_react2.default.createElement(_reactRouter.Route, { path: '/screen1', component: Screen1 }),
-			_react2.default.createElement(_reactRouter.Route, { path: '/screen2', component: Screen2 })
+			_react2.default.createElement(_reactRouter.Route, { path: '/screen2', component: Screen2 }),
+			_react2.default.createElement(_reactRouter.Route, { path: '/screen3', component: _Screen2.default })
 		)
 	), document.getElementById('app'));
 
@@ -26123,6 +26134,96 @@
 	
 	exports.default = (0, _createRouterHistory2.default)(_createHashHistory2.default);
 	module.exports = exports['default'];
+
+/***/ },
+/* 222 */
+/*!************************!*\
+  !*** ./src/Screen3.js ***!
+  \************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _ScreenTitle = __webpack_require__(/*! ./ScreenTitle.js */ 223);
+	
+	var _ScreenTitle2 = _interopRequireDefault(_ScreenTitle);
+	
+	var _ScreenStuff = __webpack_require__(/*! ./ScreenStuff.js */ 224);
+	
+	var _ScreenStuff2 = _interopRequireDefault(_ScreenStuff);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = function () {
+		return _react2.default.createElement(
+			'div',
+			null,
+			_react2.default.createElement(_ScreenTitle2.default, null),
+			_react2.default.createElement(_ScreenStuff2.default, null)
+		);
+	};
+
+/***/ },
+/* 223 */
+/*!****************************!*\
+  !*** ./src/ScreenTitle.js ***!
+  \****************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = function () {
+		return _react2.default.createElement(
+			'h1',
+			null,
+			'TITLE'
+		);
+	};
+
+/***/ },
+/* 224 */
+/*!****************************!*\
+  !*** ./src/ScreenStuff.js ***!
+  \****************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = function () {
+		return _react2.default.createElement(
+			'p',
+			null,
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat quidem libero, voluptatem iste aperiam eum tempore laboriosam, voluptates, voluptatum porro, dicta deleniti animi accusantium debitis sunt hic inventore sequi. Accusantium.'
+		);
+	};
 
 /***/ }
 /******/ ]);

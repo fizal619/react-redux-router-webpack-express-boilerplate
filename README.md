@@ -8,7 +8,7 @@ If you want to define your own `/api` for use in your app, make sure to `use` th
 
 1. Fork or clone this repo as needed.
 2. `npm install` 
-3. `npm run dev` for the development server
+3. `npm start` for the development server
 
 ##Directory Structure
 
