@@ -2,11 +2,19 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, Link, browserHistory, hashHistory } from 'react-router';
 import {Provider} from 'react-redux'
+import { createStore } from 'redux';
 
-import store from './store'
+import reducer from './reducers';
+
+
 import Screen1 from './Screen1.jsx'
 import Screen2 from './Screen2.jsx'
 import Screen3 from './Screen3.jsx'
+
+const store = createStore(reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ &&
+  window.__REDUX_DEVTOOLS_EXTENSION__()
+  );
 
 const Home =(props)=> <div>
 												<h1>HOME</h1>

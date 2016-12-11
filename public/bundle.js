@@ -59,9 +59,11 @@
 	
 	var _reactRedux = __webpack_require__(/*! react-redux */ 222);
 	
-	var _store = __webpack_require__(/*! ./store */ 250);
+	var _redux = __webpack_require__(/*! redux */ 229);
 	
-	var _store2 = _interopRequireDefault(_store);
+	var _reducers = __webpack_require__(/*! ./reducers */ 251);
+	
+	var _reducers2 = _interopRequireDefault(_reducers);
 	
 	var _Screen = __webpack_require__(/*! ./Screen1.jsx */ 253);
 	
@@ -76,6 +78,8 @@
 	var _Screen6 = _interopRequireDefault(_Screen5);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var store = (0, _redux.createStore)(_reducers2.default, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 	
 	var Home = function Home(props) {
 		return _react2.default.createElement(
@@ -116,7 +120,7 @@
 	
 	(0, _reactDom.render)(_react2.default.createElement(
 		_reactRedux.Provider,
-		{ store: _store2.default },
+		{ store: store },
 		_react2.default.createElement(
 			_reactRouter.Router,
 			{ history: _reactRouter.browserHistory },
@@ -27858,31 +27862,7 @@
 	}
 
 /***/ },
-/* 250 */
-/*!**********************!*\
-  !*** ./src/store.js ***!
-  \**********************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _redux = __webpack_require__(/*! redux */ 229);
-	
-	var _reducers = __webpack_require__(/*! ./reducers */ 251);
-	
-	var _reducers2 = _interopRequireDefault(_reducers);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var store = (0, _redux.createStore)(_reducers2.default);
-	// import { promiseMiddleware, localStorageMiddleware } from './middleware';
-	exports.default = store;
-
-/***/ },
+/* 250 */,
 /* 251 */
 /*!*******************************!*\
   !*** ./src/reducers/index.js ***!
@@ -27905,17 +27885,18 @@
 	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
 	  var action = arguments[1];
 	
+	  // console.log(action)
+	  // console.log(state)
+	
 	  switch (action.type) {
 	    case _actions.OPEN:
-	      // console.log('open!')
-	      return {
+	      return Object.assign({}, state, {
 	        isOpen: true
-	      };
+	      });
 	    case _actions.CLOSE:
-	      // console.log('close!')
-	      return {
+	      return Object.assign({}, state, {
 	        isOpen: false
-	      };
+	      });
 	    default:
 	      return state;
 	  }
@@ -27933,8 +27914,8 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var OPEN = exports.OPEN = 'button/OPEN';
-	var CLOSE = exports.CLOSE = 'button/CLOSE';
+	var OPEN = exports.OPEN = { type: 'button/OPEN' };
+	var CLOSE = exports.CLOSE = { type: 'button/CLOSE' };
 
 /***/ },
 /* 253 */
@@ -27955,6 +27936,8 @@
 	
 	var _reactRedux = __webpack_require__(/*! react-redux */ 222);
 	
+	var _actions = __webpack_require__(/*! ./actions */ 252);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var mapStateToProps = function mapStateToProps(state) {
@@ -27966,17 +27949,15 @@
 	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 			return {
 					open: function open() {
-							return dispatch({ type: 'button/OPEN' });
+							return dispatch({ type: _actions.OPEN });
 					},
 					close: function close() {
-							return dispatch({ type: 'button/CLOSE' });
+							return dispatch({ type: _actions.CLOSE });
 					}
 			};
 	};
 	
 	var Screen1 = function Screen1(props) {
-			console.log(props);
-			// props.open()
 			return _react2.default.createElement(
 					'div',
 					null,
@@ -27988,16 +27969,16 @@
 					_react2.default.createElement(
 							'p',
 							null,
-							props.isOpen ? "true" : "false"
+							props.state.isOpen ? "true" : "false"
 					),
 					_react2.default.createElement(
 							'button',
-							{ onCLick: props.open },
+							{ onClick: props.open },
 							'OPEN'
 					),
 					_react2.default.createElement(
 							'button',
-							{ onCLick: props.close },
+							{ onClick: props.close },
 							'CLOSE'
 					)
 			);
@@ -28024,15 +28005,13 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var Screen2 = function Screen2(props) {
-		_react2.default.createElement(
+	exports.default = function (props) {
+		return _react2.default.createElement(
 			'h1',
 			null,
 			'SCREEN 2'
 		);
 	};
-	
-	exports.default = Screen2;
 
 /***/ },
 /* 255 */

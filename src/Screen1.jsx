@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {OPEN, CLOSE} from './actions'
 
 const mapStateToProps = state => ({
   state
@@ -7,20 +8,18 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   open: () =>
-    dispatch({ type: 'button/OPEN' }),
+    dispatch({ type: OPEN }),
   close: () =>
-    dispatch({ type: 'button/CLOSE' }),
+    dispatch({ type: CLOSE }),
 });
 
 const Screen1 =(props)=>{ 
-	console.log(props)
-	// props.open()
 	return(
 	<div>
 		<h1>SCREEN 1</h1>
-		<p>{props.isOpen ? "true" : "false"}</p>
-		<button onCLick={props.open}>OPEN</button>
-		<button onCLick={props.close}>CLOSE</button>
+		<p>{props.state.isOpen ? "true" : "false"}</p>
+		<button onClick={props.open}>OPEN</button>
+		<button onClick={props.close}>CLOSE</button>
 	</div>
 	)
 }

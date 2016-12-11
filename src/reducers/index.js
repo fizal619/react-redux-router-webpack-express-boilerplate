@@ -5,17 +5,18 @@ const initialState = {
 }
 
 export default (state = initialState, action) => {
+  // console.log(action)
+  // console.log(state)
+
   switch (action.type) {
     case OPEN:
-    	// console.log('open!')
-      return  {
-      	isOpen: true
-      }
+      return  Object.assign({}, state, {
+        isOpen: true
+      })
     case CLOSE:
-    	// console.log('close!')
-    	return {
-      	isOpen: false
-      }
+      return  Object.assign({}, state, {
+        isOpen: false
+      })
     default:
       return state
   }
