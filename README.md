@@ -8,7 +8,7 @@ If you want to define your own `/api` for use in your app, make sure to `use` th
 
 1. Fork or clone this repo as needed.
 2. `npm install` 
-3. `npm start` for the development server
+3. `npm run dev` for the development server
 
 ##Directory Structure
 
@@ -29,6 +29,7 @@ If you want to define your own `/api` for use in your app, make sure to `use` th
 
 * Compiled js is piped to the `public/` folder next to our defined index.html(not auto generated yet). 
 * `src/` holds the react components, make sure everything is relevant to index.js. 
+* `src/css` is where you can put the *.scss files to be compiled with sass. Sass watches that folder and outputs to public/css.
 
 
 ##TODO
