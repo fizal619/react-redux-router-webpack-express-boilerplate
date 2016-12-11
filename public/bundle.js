@@ -61,19 +61,19 @@
 	
 	var _redux = __webpack_require__(/*! redux */ 229);
 	
-	var _reducers = __webpack_require__(/*! ./reducers */ 251);
+	var _reducers = __webpack_require__(/*! ./reducers */ 250);
 	
 	var _reducers2 = _interopRequireDefault(_reducers);
 	
-	var _Screen = __webpack_require__(/*! ./Screen1.jsx */ 253);
+	var _Screen = __webpack_require__(/*! ./Screen1.jsx */ 252);
 	
 	var _Screen2 = _interopRequireDefault(_Screen);
 	
-	var _Screen3 = __webpack_require__(/*! ./Screen2.jsx */ 254);
+	var _Screen3 = __webpack_require__(/*! ./Screen2.jsx */ 253);
 	
 	var _Screen4 = _interopRequireDefault(_Screen3);
 	
-	var _Screen5 = __webpack_require__(/*! ./Screen3.jsx */ 255);
+	var _Screen5 = __webpack_require__(/*! ./Screen3.jsx */ 254);
 	
 	var _Screen6 = _interopRequireDefault(_Screen5);
 	
@@ -27862,8 +27862,7 @@
 	}
 
 /***/ },
-/* 250 */,
-/* 251 */
+/* 250 */
 /*!*******************************!*\
   !*** ./src/reducers/index.js ***!
   \*******************************/
@@ -27875,7 +27874,7 @@
 	  value: true
 	});
 	
-	var _actions = __webpack_require__(/*! ../actions */ 252);
+	var _actions = __webpack_require__(/*! ../actions */ 251);
 	
 	var initialState = {
 	  isOpen: false
@@ -27903,7 +27902,7 @@
 	};
 
 /***/ },
-/* 252 */
+/* 251 */
 /*!******************************!*\
   !*** ./src/actions/index.js ***!
   \******************************/
@@ -27918,7 +27917,7 @@
 	var CLOSE = exports.CLOSE = { type: 'button/CLOSE' };
 
 /***/ },
-/* 253 */
+/* 252 */
 /*!*************************!*\
   !*** ./src/Screen1.jsx ***!
   \*************************/
@@ -27936,7 +27935,7 @@
 	
 	var _reactRedux = __webpack_require__(/*! react-redux */ 222);
 	
-	var _actions = __webpack_require__(/*! ./actions */ 252);
+	var _actions = __webpack_require__(/*! ./actions */ 251);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -27987,7 +27986,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Screen1);
 
 /***/ },
-/* 254 */
+/* 253 */
 /*!*************************!*\
   !*** ./src/Screen2.jsx ***!
   \*************************/
@@ -28014,7 +28013,7 @@
 	};
 
 /***/ },
-/* 255 */
+/* 254 */
 /*!*************************!*\
   !*** ./src/Screen3.jsx ***!
   \*************************/
@@ -28030,11 +28029,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ScreenTitle = __webpack_require__(/*! ./ScreenTitle.jsx */ 256);
+	var _ScreenTitle = __webpack_require__(/*! ./ScreenTitle.jsx */ 255);
 	
 	var _ScreenTitle2 = _interopRequireDefault(_ScreenTitle);
 	
-	var _ScreenStuff = __webpack_require__(/*! ./ScreenStuff.jsx */ 257);
+	var _ScreenStuff = __webpack_require__(/*! ./ScreenStuff.jsx */ 256);
 	
 	var _ScreenStuff2 = _interopRequireDefault(_ScreenStuff);
 	
@@ -28050,7 +28049,7 @@
 	};
 
 /***/ },
-/* 256 */
+/* 255 */
 /*!*****************************!*\
   !*** ./src/ScreenTitle.jsx ***!
   \*****************************/
@@ -28077,7 +28076,7 @@
 	};
 
 /***/ },
-/* 257 */
+/* 256 */
 /*!*****************************!*\
   !*** ./src/ScreenStuff.jsx ***!
   \*****************************/

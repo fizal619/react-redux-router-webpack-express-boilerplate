@@ -1,4 +1,4 @@
-#React-Router + Express Boilerplate
+#React + Redux + Router + SASS + Webpack + Express Boilerplate
 
 Built with **browserHistory** in mind, it has a node server running on port 3000 with a wildcard (*) route to direct any incoming request to index.html. 
 
