@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "concurrently --prefix \"[{name}]\" -k \"webpack -d --watch --colors\" \"nodemon server.js\" -n \"WEBPACK,NODEMON\""
+    "dev": "concurrently --prefix \"[{name}]\" -k \"webpack -d --watch --colors\" \" sass --watch src/css:public/css\" \"nodemon server.js\" -n \"WEBPACK,SASS,NODEMON\""
   },
   "author": "Fizal Sarif",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "concurrently": "^3.1.0",
     "express": "^4.14.0",
@@ -23,7 +23,6 @@
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
     "http-server": "^0.8.5",
-    "sass": "^0.5.0",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
   }
