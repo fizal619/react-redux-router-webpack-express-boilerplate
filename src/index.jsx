@@ -1,10 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, Link, browserHistory, hashHistory } from 'react-router';
-import Screen3 from './Screen3.js'
+import {Provider} from 'react-redux'
 
-const Screen1 =()=> <h1>SCREEN 1</h1>
-const Screen2 =()=> <h1>SCREEN 2</h1>
+import store from './store'
+import Screen1 from './Screen1.jsx'
+import Screen2 from './Screen2.jsx'
+import Screen3 from './Screen3.jsx'
+
 const Home =(props)=> <div>
 												<h1>HOME</h1>
 												<Link to="/" >Home?</Link><br/>
@@ -17,7 +20,7 @@ const Home =(props)=> <div>
 
 
 render(
-	
+	<Provider store={store}>
 		<Router history={browserHistory}>
 			<Route path="/" component={Home} >
 				<Route path="/screen1" component={Screen1} />	
@@ -25,5 +28,5 @@ render(
 				<Route path="/screen3" component={Screen3} />
 			</Route>
 		</Router>
-
+	</Provider>
 	, document.getElementById('app'));

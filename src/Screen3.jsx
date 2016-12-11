@@ -1,6 +1,6 @@
 import React from 'react'
-import ScreenTitle from './ScreenTitle.js'
-import ScreenStuff from './ScreenStuff.js'
+import ScreenTitle from './ScreenTitle.jsx'
+import ScreenStuff from './ScreenStuff.jsx'
 
 export default ()=>{
 	return(
