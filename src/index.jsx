@@ -3,6 +3,8 @@ import { render } from 'react-dom';
 import { Router, Route, Link, browserHistory, hashHistory } from 'react-router';
 import {Provider} from 'react-redux'
 import { createStore } from 'redux';
+require('./css/style.css')
+
 
 import reducer from './reducers';
 

@@ -5,17 +5,24 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "concurrently --prefix \"[{name}]\" -k \"webpack -d --watch --colors\" \" sass --watch src/css:public/css\" \"nodemon server.js\" -n \"WEBPACK,SASS,NODEMON\""
+    "dev": "concurrently --prefix \"[{name}]\" -k \"webpack -d --watch --colors\"  \"nodemon server.js\" -n \"WEBPACK,NODEMON\"",
+    "build": "NODE_ENV=production webpack -p --colors"
   },
   "author": "Fizal Sarif",
   "license": "MIT",
   "dependencies": {
     "concurrently": "^3.1.0",
+    "css-loader": "^0.26.1",
     "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "nodemon": "^1.11.0",
     "path": "^0.12.7",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "react-router": "^2.0.0"
+    "react-redux": "^5.0.2",
+    "react-router": "^2.0.0",
+    "redux": "^3.6.0",
+    "style-loader": "^0.13.1"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
